@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" defer src="quizz.js"></script>
+</head>
+<body>
+  <div class="quiz-container" id="question-container">
+    <h1 id="question"></h1>
+    <div class="image-box" id="question-image"></div>
+    <div class="answers" id="answers"></div>
+    <button class="btn" id="next-btn">Próxima pergunta</button>
+  </div>
+
+  <div class="quiz-container hidden" id="result-container">
+    <h2>Resultado</h2>
+    <p id="score-text"></p>
+    <button class="btn" id="restart-btn">Reiniciar Quiz</button>
+  </div>
+</body>
+</html>
