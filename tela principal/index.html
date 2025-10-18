@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Central</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <div class="menuu">
+        <div class="menu">
+            <img src="../img/logo.png" width="50px" height="50px" alt="Logo">
+            <div>
+                <input type="text" placeholder="Pesquise um quiz...">
+            </div>
+        </div>
+        <header>
+            <nav>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                   <a href="../criar quiz/criar.html">Criar Quiz</a>
+                    <a href="#">Ranking</a>
+                    <a href="#">Sobre</a>
+                </div>
+                <div>
+                    <button onclick="window.location.href='../cadastroelogin/cadastrar.html'">Login</button>
+                    <button onclick="window.location.href='../cadastroelogin/cadastrar.html'">Cadastrar</button>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <!-- Main -->
+    <main>
+        <section id="um">
+            <div>
+                <h1>Bem-vindo ao meu site de quiz</h1>
+                <h2>Aqui você encontra quizzes de vários temas (to brincando, é só o meu trabalho de escola)</h2>
+            </div>
+        </section>
+
+        <div class="anim">
+            <h2>Quizzes de animes</h2>
+        </div>
+
+        <section id="dois">
+            <!-- Quizzes fixos -->
+            <div class="card">
+                <img src="../img/qpoke.webp" alt="">
+                <h2>Quiz de Pokémon</h2>
+                <a href="../poke.html"><button>Iniciar</button></a>
+            </div>
+            <div class="card">
+                <img src="../img/qonep.webp" alt="">
+                <h2>Quiz de One Piece</h2>
+                <button>Iniciar</button>
+            </div>
+            <div class="card">
+                <img src="../img/qdbz.webp" alt="">
+                <h2>Quiz de Dragon Ball</h2>
+                <button>Iniciar</button>
+            </div>
+        </section>
+
+        <div class="anim">
+            <h2>Quizzes criados por usuários</h2>
+        </div>
+
+        <section id="quizzes-usuarios" class="cards-container">
+            <!-- Aqui serão inseridos os quizzes do Supabase via JS -->
+        </section>
+    </main>
+</body>
+</html>

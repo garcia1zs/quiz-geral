@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Quiz</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" defer src="criar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <div class="form">
+    <h2>Criar novo Quiz</h2>
+    <input id="title" type="text" placeholder="Título do quiz">
+    <input id="category" type="text" placeholder="Categoria">
+    <textarea id="questions" rows="6" placeholder='Cole aqui em JSON: [{"texto": "Pergunta 1", "opcoes": ["A","B","C"], "resposta":"A"}]'></textarea>
+    <button id="save">Salvar Quiz</button>
+    <p id="status"></p>
+  </div>
+</body>
+</html>
