@@ -177,7 +177,7 @@ button:hover{
   height: 250px;
 }
 .card:hover{
-    transition: 0.5s;
+    transition: 0.2s;
     box-shadow: 5px 5px 12px;
     border: 2px solid black;
    
@@ -430,3 +430,4 @@ footer{
 #sobre p{
   font-size: 1.2em;
 }
+

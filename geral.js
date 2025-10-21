@@ -167,7 +167,7 @@ nextButton.addEventListener("click", () => {
   }
 });
 
-function showResults() {
+async function showResults() {
   document.getElementById("question-container").classList.add("hidden");
   resultContainer.classList.remove("hidden");
 
@@ -175,11 +175,41 @@ function showResults() {
   let message = "";
 
   if (percent === 100) message = "Incrível! Você é um verdadeiro explorador 🥇🔥";
-  else if (percent >= 70) message = "Excelente! voce sabe muito 💪⚡";
+  else if (percent >= 70) message = "Excelente! você sabe muito 💪⚡";
   else if (percent >= 40) message = "Hmm... precisa estudar mais 🥋";
   else message = "kkkkkkk";
 
   scoreText.innerHTML = `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong> perguntas.<br>${message}`;
+
+  // 🔹 SUPABASE: salvar resultado no ranking
+  try {
+    const { data: userData, error: userError } = await supabase.auth.getUser();
+    if (userError) throw userError;
+    const user = userData.user;
+
+    if (user) {
+      const { data, error } = await supabase
+        .from("resultados")
+        .insert([
+          {
+            usuario_id: user.id,
+            quiz_id: "quiz_geral", // você pode trocar isso dependendo do quiz
+            acertos: score,
+            total_perguntas: questions.length,
+          },
+        ]);
+
+      if (error) {
+        console.error("Erro ao salvar resultado:", error);
+      } else {
+        console.log("Resultado salvo com sucesso:", data);
+      }
+    } else {
+      console.log("Usuário não está logado. Resultado não salvo.");
+    }
+  } catch (err) {
+    console.error("Erro ao conectar com Supabase:", err);
+  }
 }
 
 restartButton.addEventListener("click", startQuiz);
