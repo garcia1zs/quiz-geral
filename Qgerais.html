@@ -14,9 +14,9 @@
 
 </head>
 
-<body id="principal">
+<body>
     <div id="menlat" class="menuLateral">
-        <button><a href="#" >Mudar cor</a></button>
+        <button><a href="#">Mudar cor</a></button>
         <button><a href="#">Avalie</a></button>
         <button><a href="#">Sobre</a></button>
         <button id="confies" onclick="esconder()">sair</button>
@@ -38,12 +38,12 @@
                 <div class="links">
                     <a href="index.html">Home</a>
                     <div class="dropdown">
-          <a href="#" class="menuocult">Categorias ▾</a>
-          <ul class="submenu">
-            <li><a href="animes.html">Animes</a></li>
-            <li><a href="Qgerais.html">Quizes Gerais</a></li>
-          </ul>
-        </div>
+                        <a href="#" class="menuocult">Categorias ▾</a>
+                        <ul class="submenu">
+                            <li><a href="animes.html">Animes</a></li>
+                            <li><a href="geral.html">Geral</a></li>
+                        </ul>
+                    </div>
                     <a href="ranking.html">Ranking</a>
                     <a href="sobre.html">Sobre</a>
                 </div>
@@ -56,42 +56,12 @@
         </header>
     </div>
     <main>
-        <section id="um">
-            <video autoplay muted loop playsinline id="bg-video">
-                <source src="video/background.mp4" type="video/mp4">
-            </video>
-            <div>
-                <h1 class="gradient-text">Bem-vindo ao meu site de quiz</h1>
-                <h2>Aqui você encontra quizzes de vários temas (to brincando, é só o meu trabalho de escola)</h2>
-                <div class="smais"><a href="sobre.html"><button id="smais">Saiba mais</button></a></div>
-            </div>
+        <section style="height: 200px;" id="um">
+            <h1>Geral</h1>
         </section>
 
-        <div class="anim">
-            <h2>Quizzes de animes</h2>
-        </div>
 
-        <section id="dois">
-            <div class="card">
-                <img src="img/qpoke.webp" alt="">
-                <h1>Quiz de Pokémon</h1>
-                <a href="poke.html"><button>Iniciar</button></a>
-                <p>Ess quiz contém 10 questões, consideradas por especialistas(eu) como muito dificeis</p>
-            </div>
-            <div class="card">
-                <img src="img/qonep.webp" alt="">
-                <h1>Quiz de One Piece</h1>
-                <a href="one.html"><button>Iniciar</button></a>
-                <p>Ess quiz contém 10 questões, consideradas por especialistas(eu) como muito dificeis</p>
-            </div>
-            <div class="card">
-                <img src="img/qdbz.webp" alt="">
-                <h1>Quiz de Dragon Ball</h1>
 
-                <a href="dbz.html"><button>Iniciar</button></a>
-                <p>Ess quiz contém 10 questões, consideradas por especialistas(eu) como muito dificeis</p>
-            </div>
-        </section>
         <div class="anim">
             <h2>Quiz de questões gerais</h2>
         </div>
@@ -116,26 +86,8 @@
                 <p>Ess quiz contém 10 questões, consideradas por especialistas(eu) como muito dificeis</p>
             </div>
         </section>
-        <section id="quatro">
-            <div class="card">
-                <img src="img/ad.jpg" alt="">
-                <h1>Adcionar+</h1>
-                <a href="#"><button>Iniciar</button></a>
-            </div>
-            <div class="card">
-                <img src="img/ad.jpg" alt="">
-                <h1>Adcionar+</h1>
-                <a href="#"><button>Iniciar</button></a>
-            </div>
-            <div class="card">
-                <img src="img/ad.jpg" alt="">
-                <h1>Adcionar+</h1>
-
-                <a href="#"><button>Iniciar</button></a>
-            </div>
-        </section>
     </main>
-     <footer>
+    <footer>
         <p>criado por Carlos Vinicius Antonio Garcia</p>
     </footer>
     <script>
@@ -147,7 +99,9 @@
         function esconder() {
             const menu = document.getElementById("menlat");
             menu.style.left = "-9999px";
-        }
-        </script>
+        }</script>
+
+
 </body>
+
 </html>

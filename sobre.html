@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="authStatus.js"></script>
+</head>
+<body id="sobre">
+     <div id="menlat" class="menuLateral">
+        <button><a href="#">Mudar cor</a></button>
+        <button><a href="#">Avalie</a></button>
+        <button><a href="#">Sobre</a></button>
+        <button id="confies" onclick="esconder()">sair</button>
+    </div>
+    <div class="menuu">
+        <div class="menu">
+            <div class="logo">
+                
+                <img src="img/logo.png" width="50px" height="50px" alt="Logo">
+            </div>
+            <div>
+                <input type="text" placeholder="Pesquise um quiz..."> 
+            </div>
+        </div>
+        <header>
+            <nav>
+                <div class="links">
+                    <a href="index.html">Home</a>
+                   <a href="#" class="menuocult">Categorias</a>
+                    <a href="ranking.html">Ranking</a>
+                    <a href="#">Sobre</a>
+                    
+                </div>
+                <div>
+                    <button onclick="mostrar('itr')">Introdução</button>
+                    <button onclick="mostrar('his')">História</button>
+                    <button onclick="mostrar('oqfaz')">O que fazemos</button>
+                    <button onclick="mostrar('equi')">Equipe</button>
+                    <button onclick="mostrar('cont')">Contatos</button>
+
+                </div>
+  <div id="authArea">
+  <button onclick="window.location.href='cadastro.html'">Login</button>
+  <button onclick="window.location.href='cadastro.html'">Cadastrar</button>
+</div>
+
+            </nav>
+
+        </header>
+    </div>
+    <main>
+        <div id="itr" class="trocacont">
+            <h1>Introdução</h1>
+            <p>Bem-vindo ao QuizMente, o lugar onde aprender é tão divertido quanto jogar! 🎯
+
+Nosso objetivo é transformar o conhecimento em um desafio empolgante — seja em matemática, história, ciências ou cultura geral, aqui você testa o que sabe e descobre o que ainda pode aprender. Criamos cada quiz com perguntas criativas, níveis de dificuldade variados e uma dose extra de diversão.
+
+O QuizMente nasceu da ideia de unir educação e entretenimento, tornando o aprendizado leve, rápido e acessível a todos. Se você adora competir com amigos, se desafiar e descobrir curiosidades incríveis, esse é o seu lugar!
+
+Afinal, quem disse que estudar não pode ser divertido? 💡</p>
+        </div>
+        <div id="his" class="trocacont">
+            <h1>🕰️ Nossa História
+</h1>
+            <p>
+O QuizMente nasceu em 2024, quando Carlos Vinicius, um jovem apaixonado por tecnologia e aprendizado, teve uma ideia simples: transformar o estudo em algo realmente divertido.
+Durante as aulas de programação, ele percebeu que aprender podia ser leve — bastava unir jogos e conhecimento. Foi então que, junto com a ajuda da IA ChatGPT, começou a criar um site interativo onde as pessoas pudessem testar seus conhecimentos e aprender de forma descontraída.
+Hoje, o QuizMente é mais do que um site de perguntas e respostas — é uma comunidade que acredita que a curiosidade é o melhor professor.</p>
+        </div>
+        <div id="oqfaz" class="trocacont">
+            <h1>Oque fazemos</h1>
+            <p>No QuizMente, criamos quizzes educativos e desafiadores sobre diversos temas, como:
+            <ul> 
+                <li>Matemática 🧮</li>
+                <li>História 📜</li>
+                <li>Ciências 🔬</li>
+                <li>Programação 💻</li>
+                <li>Cultura geral 🌍</li>
+            </ul>
+Nosso objetivo é ajudar você a aprender enquanto se diverte. As perguntas variam de níveis fáceis a difíceis, com feedback instantâneo, para que cada rodada seja uma oportunidade de crescer.Além disso, estamos sempre adicionando novos modos de jogo, pontuações, e até rankings, para deixar tudo ainda mais emocionante!</p>
+        </div>
+        <div id="equi" class="trocacont">
+            <h1>Equipe</h1>
+            <p>Carlos Vinicius — Fundador, desenvolvedor e criador dos quizzes.
+É o responsável por toda a parte de ideias, design e programação do site. Apaixonado por tecnologia, ele acredita que a educação precisa ser interativa e criativa.
+
+🤖 ChatGPT — Assistente virtual e co-criadora do conteúdo.
+Auxilia na elaboração de perguntas, textos e funcionalidades inteligentes do site, ajudando a manter o QuizMente sempre atualizado e divertido.</p>
+        </div>
+        <div id="cont" class="trocacont">
+            <h1>Contatos</h1>
+            <p>📞 Contato
+
+Tem uma ideia de quiz? Quer sugerir um tema novo ou relatar algum problema?
+Entre em contato conosco pelos canais abaixo:
+
+📧 E-mail: contato@quizmente.com
+
+📱 Instagram: @quizmente.oficial
+
+💬 Discord: QuizMente Community</p>
+        </div>
+    </main>
+
+   <script>
+  // Função para mostrar só o conteúdo clicado
+  function mostrar(id) {
+    const secoes = document.querySelectorAll('.trocacont')
+    secoes.forEach(secao => secao.style.display = 'none') // esconde todos
+    document.getElementById(id).style.display = 'block'   // mostra o clicado
+  }
+
+  // mostra a introdução por padrão
+  document.addEventListener('DOMContentLoaded', () => {
+    mostrar('itr')
+  })
+</script>
+
+</body>
+</html>

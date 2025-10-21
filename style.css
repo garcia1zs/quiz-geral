@@ -48,11 +48,75 @@ nav a:hover{
 }
 
 #um{
+  margin-bottom: 40px;
+  height: 400px;
    display: flex;
    justify-content: center;
+   align-items: center;
    padding: 45px;
 
 }
+#bg-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 100px;
+  width: 100vw;
+  height: 430px;
+  object-fit: cover;
+  z-index: -1;
+
+}
+/* container principal */
+.links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* estrutura do submenu */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+
+  top: 100%; /* abaixo do botão */
+  left: 0;
+  background: #222;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.submenu li {
+  padding: 0;
+}
+
+.submenu li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background 0.3s;
+}
+
+.submenu li a:hover {
+  background: #444;
+}
+
+/* mostra o submenu ao passar o mouse */
+.dropdown:hover .submenu {
+  display: block;
+}
+
+
 button{
     padding: 5px;
     background-color: black;
@@ -68,9 +132,36 @@ button:hover{
     color: #0050C3;
 }
 #um h2{
-    color: rgb(119, 116, 116);
+    color: rgb(156, 156, 156);
         text-align: justify;
 
+}
+.gradient-text {
+  font-size: 70px;
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(270deg, #00c6ff, #0072ff, rgba(255, 79, 56, 0.951), #ff9900);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: mover 6s ease infinite;
+}
+
+@keyframes mover {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+#smais{
+  position: relative;
+  left: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 250px;
+}
+#smais:hover{
+  background-color: #142b44;
+  transition: 0.3s;
 }
 
 .card{
@@ -88,6 +179,7 @@ button:hover{
 .card:hover{
     transition: 0.5s;
     box-shadow: 5px 5px 12px;
+    border: 2px solid black;
    
 }
 #dois{
@@ -95,9 +187,22 @@ button:hover{
     justify-content: center;
     gap: 15px;
 }
+#tres{
+   display: flex;
+   justify-content: center;
+  gap: 15px;
+  margin-top: 80px;
+}
+#quatro{
+    display: flex;
+   justify-content: center;
+  gap: 15px;
+  margin-top: 80px;
+}
 .anim h2{
     background-image: linear-gradient(to right, #0050C3, #73a6ec, white  );
     margin-left: 20px;
+    margin-top: 10px;
   
 }
 
@@ -226,10 +331,23 @@ button:hover {
   font-weight: bold;
 }
 
+
 /*tela de cadastro*/
-#cadastro{
-  width: 600px;
-  height: 600px;
+
+#corpocadas{
+  background-image: url(img/ba.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form{
+  width: 400px;
+  height: 400px;
   border: 1px solid black;
   
 }
@@ -240,6 +358,7 @@ button:hover {
   height: 100vh;
   background-color: black;
   position: absolute;
+  z-index: 1;
   left: -9999px;
   transition: left 0.6s ease; /* animação suave */
 }
@@ -259,4 +378,55 @@ button:hover {
 a{
   text-decoration: none;
   color: white;
+}
+/*ranking*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+footer{
+  background-color: #005fd1;
+  padding: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*sobre*/
+
+.trocacont {
+  height: 800px;
+  width: 700px;
+  position: absolute;
+  left: 26%;
+  display: none;
+  padding: 20px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+#sobre h1{
+  text-align: center;
+  font-size: 4em;
+}
+#sobre p{
+  font-size: 1.2em;
 }
